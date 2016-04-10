@@ -6,4 +6,4 @@ OR
 I will create a web application that requires a login password to control the lamp with the option of turning it on or off.
 
 ## Project Repository
-Repository created, named Lamp-
+Repository created, named Lamp.
