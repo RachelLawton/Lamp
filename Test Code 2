@@ -1,0 +1,37 @@
+import sys
+try:
+  import tweepy
+except:
+  print("Please open the Shell and run 'social_install' script")
+  sys.exit(1)
+
+from wyliodrin import *
+
+from time import *
+
+twitter_key = '0GqbRBgCBezLppVJ6qNtIRTBe'
+twitter_secret = 'DDTl0IeCDrU63xLsivj9pcsuDC92GI6kRZZ0RT11Ao8lSBjHsg'
+twitter_token = '710799654393405441-QxlHDhnMqUqP3AsWvhuzypLKw62CzIu'
+twitter_secretToken = 'Byxww5dZeUUuopvi7ShlMc6OlnfY2bWS3NZ7Xya45um1W'
+
+pinMode (10, 0)
+
+pinMode (9, 1)
+
+def twitterFunction(cKey, cSecret, aToken, aTSecret):
+  auth = tweepy.OAuthHandler(cKey, cSecret)
+  auth.set_access_token(aToken, aTSecret)
+  twitter_tweet = tweepy.API(auth)
+  return twitter_tweet
+
+
+sleep ((1000)/1000.0)
+if (digitalRead (10) == 1) == True:
+  digitalWrite (9, 1)
+  twitter_tweet = twitterFunction(twitter_key, twitter_secret, twitter_token, twitter_secretToken)
+  twitter_tweet.update_status(str('I'))
+  sleep ((20000)/1000.0)
+if (digitalRead (10) == 0) == True:
+  digitalWrite (9, 0)
+  twitter_tweet = twitterFunction(twitter_key, twitter_secret, twitter_token, twitter_secretToken)
+  twitter_tweet.update_status(str('O'))
