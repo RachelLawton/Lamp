@@ -1,0 +1,6 @@
+{
+  "name": "Lamp",
+  "tagline": "Connecting a lamp to a twitter account that will accept tweets from the owner to turn itself on and off.",
+  "body": "# Project Name\r\n####Student Name: *Emma Ní Bhriain*   \r\n\r\nWhen I send a tweet to a twitter account for my lamp, it will turn off or turn on depending on the content of the tweet. \r\nOR\r\nI will create a web application that requires a login password to control the lamp with the option of turning it on or off.\r\n\r\n## Project Repository\r\nRepository created, named Lamp.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
