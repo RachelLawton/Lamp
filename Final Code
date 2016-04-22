@@ -35,8 +35,6 @@ def twitterUserTimelineFunction(user):
 
 pinMode (9, 1)
 
-pinMode (10, 0)
-
 
 print('twitter setup')
 print('waiting for tweets')
@@ -53,9 +51,3 @@ def loopCode():
   print(tweet)
   Timer(3, loopCode).start()
 loopCode()
-if digitalRead (10) == 1:
-  digitalWrite (9, 1)
-  print('Device has been turned on manually')
-elif digitalRead (10) == 0:
-  digitalWrite (9, 0)
-  print('Device has been turned off manually')
