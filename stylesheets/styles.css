@@ -354,3 +354,7 @@ footer p + p {
     content: 'at https://github.com/';
   }
 }
+
+.right{
+  float:right;
+}
